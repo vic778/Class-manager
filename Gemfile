@@ -27,6 +27,17 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'activeadmin'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'carrierwave'
+gem 'devise'
+gem "jbuilder"
+gem 'jwt'
+gem 'omniauth-google-oauth2'
+gem "pundit"
+gem 'rack-cors'
+gem 'thor'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -43,7 +54,12 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
+
+gem 'cloudinary'
+gem "image_processing", "~> 1.2"
+gem "shrine"
+gem 'shrine-cloudinary', '~> 1.1', '>= 1.1.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -51,6 +67,10 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'rubocop'
 end
 
 group :development do
