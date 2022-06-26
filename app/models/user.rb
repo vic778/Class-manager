@@ -7,6 +7,9 @@ class User < ApplicationRecord
   belongs_to :role
   after_initialize :set_default_role
 
+  # validates :username, presence: true, uniqueness: true
+  # validates :phone, presence: true
+
   def update_role(role_name)
     self.role = Role.find_or_create_by(name: role_name)
     save
@@ -19,6 +22,6 @@ class User < ApplicationRecord
   private
 
   def set_default_role
-    self.role ||= Role.find_by(name: 'user') if role.nil?
+    self.role ||= Role.find_by(name: 'student') if role.nil?
   end
 end
