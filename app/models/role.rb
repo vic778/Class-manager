@@ -2,7 +2,7 @@ class Role < ApplicationRecord
   has_many :users
 
   enum name: {
-    user: 0,
+    student: 0,
     teacher: 1,
     admin: 2
   }
