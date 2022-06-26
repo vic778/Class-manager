@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+   scope :api, defaults: { format: :json } do
+      devise_for :users, controllers: { sessions: :sessions }, path_names: { sign_in: :login }
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+
+   end
 end
