@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resource :user, only: [:update]
       get 'user/auto_login', to: 'users#auto_login'
 
-      # resources :users
+      resources :users
       
 
    end
