@@ -32,7 +32,7 @@ class PermissionsController < ApplicationController
   end
 
   def user_not_authorized
-    if current_user.role.name == "user"
+    if current_user.role.name == "student"
       render json: { error: "You are not authorized to perform this action" }, status: :unauthorized
     else
       action = params[:action]
