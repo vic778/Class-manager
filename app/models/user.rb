@@ -7,7 +7,6 @@ class User < ApplicationRecord
   after_initialize :set_default_role
   belongs_to :role
 
-
   # validates :username, presence: true, uniqueness: true
   # validates :phone, presence: true
 
