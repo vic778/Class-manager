@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable
 
-  belongs_to :role
   after_initialize :set_default_role
+  belongs_to :role
 
   # validates :username, presence: true, uniqueness: true
   # validates :phone, presence: true
