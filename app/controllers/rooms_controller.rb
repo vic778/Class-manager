@@ -13,7 +13,7 @@ class RoomsController < PermissionsController
   end
 
   def show
-     @rooms = helpers.render_users_in_room(Room.find(params[:id]))
+    @rooms = helpers.render_users_in_room(Room.find(params[:id]))
     if @rooms
       render json: @rooms, status: :ok
     else
