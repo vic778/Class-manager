@@ -50,6 +50,6 @@ class RoomsController < PermissionsController
   end
 
   def room_params
-    params.permit(:name, :field)
+    params.permit(:name, :field, user:[])
   end
 end
