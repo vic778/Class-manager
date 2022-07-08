@@ -8,7 +8,7 @@ class User < ApplicationRecord
   # after_initialize :set_default_class_room
   belongs_to :role
   has_many :class_room
-  has_many :rooms, through: :class_room
+  has_many :rooms, through: :class_room 
 
   validates :username, presence: true, uniqueness: true
   validates :password_confirmation, presence: true, on: :create
