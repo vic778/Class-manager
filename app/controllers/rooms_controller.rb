@@ -5,7 +5,7 @@ class RoomsController < PermissionsController
 
   def index
     @rooms = Room.all
-    if @rooms.empty?
+    if @rooms
       render json: @rooms, status: :ok
     else
       render json: "[]", status: :no_content
@@ -13,7 +13,12 @@ class RoomsController < PermissionsController
   end
 
   def show
-    render json: @room
+     @rooms = helpers.render_users_in_room(Room.find(params[:id]))
+    if @rooms
+      render json: @rooms, status: :ok
+    else
+      render json: "[]", status: :no_content
+    end
   end
 
   def create
