@@ -8,7 +8,9 @@ Rails.application.routes.draw do
       get 'user/auto_login', to: 'users#auto_login'
 
       resources :users
+      resources :pools, only: [:index, :show]
       resources :rooms
+      resources :add_to_rooms, only: [:create]
       
 
    end
