@@ -1,12 +1,12 @@
 class UsersController < PermissionsController
   before_action :authenticate_user!
 
-  def index
-    @users = User.all
-    render json: @users
-  end
+  # def index
+  #   @users = User.all
+  #   render json: @users
+  # end
 
-  def show; end
+  # def show; end
 
   def update
     if current_user.update!(user_params)
