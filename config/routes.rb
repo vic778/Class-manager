@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :rooms
       resources :add_to_rooms, only: [:create]
       delete 'rooms/:room_id/:user_id', to: 'add_to_rooms#destroy'
+      resources :annonces
       
 
    end
