@@ -38,4 +38,13 @@ class PermissionsController < ApplicationController
       action = params[:action]
     end
   end
+
+  def only_admin
+    if current_user.role.name =="admin"
+      action = params[:action] 
+    else
+      render json: { error: "Only the admin can perform this action" }, status: :unauthorized
+    end
+  end
+  
 end
