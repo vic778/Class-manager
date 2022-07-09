@@ -1,6 +1,6 @@
 class RoomsController < PermissionsController
   before_action :authenticate_user!
-  before_action :user_not_authorized
+  before_action :only_admin
   before_action :set_room, only: %i[show update destroy]
 
   def index
