@@ -5,6 +5,10 @@
   ![](app/assets/images/screen1.png)
  - Class Manager contains more features like:
 
+    - Only an admin can create room and classroom
+    - Only an admin can update the role of a student or a teacher
+    - Only an admin can add Teacher and student in a class_room
+    - Teachers can remove a student in a class_room if he makes noices or something else 
     - Teachers can add or edit their student's marks after adding them in the class.
     - Teachers can also write notice which will be sent to all students in their class.
     - Teachers can upload assignments which will be sent to all students in their class and students can download the assignments.
