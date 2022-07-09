@@ -1,6 +1,6 @@
 module PoolsHelper
-  # def get_students
-  #   User.where(role_id: 1).pluck(:username)
-  #   # User.where(status: true)
-  # end
+  # get all users where status is true and their role name
+  def all_users_in_pool
+    User.where(status: true).map { |user| [user.username, user.email, user.role.name] }
+  end
 end
