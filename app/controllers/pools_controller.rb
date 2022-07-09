@@ -3,12 +3,11 @@ class PoolsController < PermissionsController
   before_action :user_not_authorized
 
   def index
-    @pools = helpers.get_all_users
+    @pools = helpers.all_users_in_pool
     if @pools
       render json: @pools
     else
       render json: { message: "[]" }, status: :unprocessable_entity
     end
   end
-
 end
