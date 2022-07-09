@@ -3,8 +3,6 @@ class AddToRoomsController < PermissionsController
   before_action :only_admin
   before_action :user_not_authorized, only: [:destroy]
 
-
-
   # add a user to a room and check if the user is already in the room
   def create
     @room = Room.find(params[:room_id])
@@ -31,5 +29,4 @@ class AddToRoomsController < PermissionsController
       render json: { success: false, message: "User not in room" }, status: :unprocessable_entity
     end
   end
-
 end
