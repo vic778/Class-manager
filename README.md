@@ -2,7 +2,7 @@
 
 > Class Manager is a Student-Teacher Portal where techers and student can sign up and teachers can add students in their class assign task and add note by student.
 
-  ![](app/assets/images/screen1.png)
+  ![](app/assets/images/screen2.png)
  - Class Manager contains more features like:
 
     - Only an admin can create room and classroom
