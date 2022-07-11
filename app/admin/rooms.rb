@@ -4,7 +4,7 @@ ActiveAdmin.register Room do
   #
   # Uncomment all parameters which should be permitted for assignment
 
-  permit_params :name, :field, :user_id, :class_room_id, :home_work_id
+  permit_params :name, :field, :user_id, :class_room_id, :home_work_id, :student_up_id
   #
   # or
   #
