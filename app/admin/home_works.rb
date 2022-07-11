@@ -4,7 +4,7 @@ ActiveAdmin.register HomeWork do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :assignment, :room_id, :user_id, :course_name
+  permit_params :assignment, :room_id, :user_id, :course_name, :student_up_id
   #
   # or
   #
