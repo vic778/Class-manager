@@ -46,4 +46,12 @@ class PermissionsController < ApplicationController
       render json: { error: "Only the admin can perform this action" }, status: :unauthorized
     end
   end
+
+  def only_student
+    if current_user.role.name == "student"
+      action = params[:action]
+    else
+      render json: { error: "Only the student can perform this action" }, status: :unauthorized
+    end
+  end
 end
