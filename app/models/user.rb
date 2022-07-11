@@ -9,10 +9,13 @@ class User < ApplicationRecord
   belongs_to :role
   has_many :class_room
   has_many :rooms, through: :class_room
+  has_many :home_works
 
   validates :username, presence: true, uniqueness: true
   validates :password_confirmation, presence: true, on: :create
   # validates :phone, presence: true
+
+  mount_uploader :profile_picture, ProfilePictureUploader
 
   def update_role(role_name)
     self.role = Role.find_or_create_by(name: role_name)

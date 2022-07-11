@@ -9,10 +9,13 @@ Rails.application.routes.draw do
 
       resources :users
       resources :pools, only: [:index]
-      resources :rooms
+      resources :rooms do
+         resources :home_works
+      end
       resources :add_to_rooms, only: [:create]
       delete 'rooms/:room_id/:user_id', to: 'add_to_rooms#destroy'
       resources :annonces
+     
       
 
    end
