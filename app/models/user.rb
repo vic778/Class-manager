@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :class_room
   has_many :rooms, through: :class_room
   has_many :home_works
+  has_many :student_ups
 
   validates :username, presence: true, uniqueness: true
   validates :password_confirmation, presence: true, on: :create
