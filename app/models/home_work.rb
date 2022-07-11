@@ -5,5 +5,5 @@ class HomeWork < ApplicationRecord
   validates :assignment, presence: true
   validates :course_name, presence: true
 
-  mount_uploader :assignment , ProfilePictureUploader
+  mount_uploader :assignment, ProfilePictureUploader
 end
