@@ -6,5 +6,5 @@ RSpec.describe Role, type: :model do
   end
 
   it { should have_many(:users) }
-  it {is_expected.to validate_presence_of(:name)}
+  it { is_expected.to validate_presence_of(:name) }
 end

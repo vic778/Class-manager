@@ -5,7 +5,6 @@ RSpec.describe ClassRoom, type: :model do
     expect(build(:class_room)).to be_valid
   end
 
-  it {should belong_to(:user)}
-  it {should belong_to(:room)}
- 
+  it { should belong_to(:user) }
+  it { should belong_to(:room) }
 end

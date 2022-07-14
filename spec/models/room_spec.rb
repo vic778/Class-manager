@@ -5,7 +5,6 @@ RSpec.describe Room, type: :model do
     expect(build(:room)).to be_valid
   end
 
-  it {is_expected.to validate_presence_of(:name)}
-  it {is_expected.to validate_presence_of(:field)}
+  it { is_expected.to validate_presence_of(:name) }
+  it { is_expected.to validate_presence_of(:field) }
 end
-

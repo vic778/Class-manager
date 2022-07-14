@@ -6,8 +6,8 @@ RSpec.describe User, type: :model do
   end
 
   it { should belong_to(:role) }
-  it {is_expected.to validate_presence_of(:username)}
-  it {is_expected.to validate_presence_of(:email)}
-  it {is_expected.to validate_presence_of(:password)}
-  it {is_expected.to validate_presence_of(:password_confirmation)}
+  it { is_expected.to validate_presence_of(:username) }
+  it { is_expected.to validate_presence_of(:email) }
+  it { is_expected.to validate_presence_of(:password) }
+  it { is_expected.to validate_presence_of(:password_confirmation) }
 end
