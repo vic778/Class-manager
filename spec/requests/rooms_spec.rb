@@ -5,7 +5,6 @@ RSpec.describe "Rooms", type: :request do
   context "when as an amdin" do
     let!(:user) { create(:user, :admin) }
     let(:room) { create(:room) }
-    # before { login_user user }
 
     describe "GET /rooms" do
       it "returns a list of rooms" do
