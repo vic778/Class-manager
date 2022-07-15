@@ -18,6 +18,10 @@ FactoryBot.define do
     trait :admin do
       association :role, factory: :role, name: 'admin'
     end
+
+    trait :teacher do
+      association :role, factory: :role, name: 'teacher'
+    end
   end
 
   factory :room do
