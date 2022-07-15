@@ -1,5 +1,5 @@
 class AnnoncesController < PermissionsController
-  before_action :authenticate_user
+  before_action :authenticate_user!
   before_action :only_admin, only: %i[create update destroy]
 
   def index
