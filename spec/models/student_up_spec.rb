@@ -29,5 +29,4 @@ RSpec.describe StudentUp, type: :model do
     before { @student_up = StudentUp.new(assignment: "") }
     it { expect(@student_up).not_to be_valid }
   end
-
 end

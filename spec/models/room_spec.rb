@@ -28,5 +28,4 @@ RSpec.describe Room, type: :model do
     before { @room2 = Room.new(name: "room1", field: "ww") }
     it { expect(@room2).not_to be_valid }
   end
-  
 end

@@ -29,5 +29,4 @@ RSpec.describe HomeWork, type: :model do
     before { @home_work = HomeWork.new(course_name: "") }
     it { expect(@home_work).not_to be_valid }
   end
-
 end

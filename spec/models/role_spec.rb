@@ -12,7 +12,7 @@ RSpec.describe Role, type: :model do
     before { @role = Role.new(name: "") }
     it { expect(@role).not_to be_valid }
   end
-  
+
   describe "when name is unique" do
     before { @role = Role.create(name: "student") }
     it { expect(@role).to be_valid }
