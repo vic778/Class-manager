@@ -6,10 +6,10 @@ RSpec.describe "Sessions", type: :request do
     let(:headers) { { "Content-Type" => "application/json" } }
 
     let(:valid_credentials) do
-      { 
-        "user": {
-        email: user.email,
-        password: user.password
+      {
+        user: {
+          email: user.email,
+          password: user.password
         }
       }.to_json
     end
@@ -19,7 +19,7 @@ RSpec.describe "Sessions", type: :request do
         email: Faker::Internet.email,
         password: Faker::Internet.password
       }.to_json
-    end    
+    end
 
     context "when request is valid" do
       before { post "/api/users/login", params: valid_credentials, headers: headers }
@@ -37,6 +37,4 @@ RSpec.describe "Sessions", type: :request do
     #   end
     # end
   end
-
-  
 end

@@ -26,7 +26,6 @@ class StudentUpsController < PermissionsController
     end
   end
 
-
   private
 
   def set_student_up

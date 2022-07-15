@@ -1,4 +1,4 @@
-# module LOGINUSER 
+# module LOGINUSER
 #   def login_user(user)
 #     visit '/api/users/login'
 #     fill_in 'Email', with: user.email
@@ -8,9 +8,8 @@
 
 # end
 
-def login_user(user)
-
-  @user = User.create(:username => "barh", :email => "rails@gmail.com", :password => "123456", :password_confirmation => "123456")
+def login_user(_user)
+  @user = User.create(username: "barh", email: "rails@gmail.com", password: "123456", password_confirmation: "123456")
   post '/api/users/login'
 
   # fill in sign in form

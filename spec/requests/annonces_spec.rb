@@ -28,23 +28,22 @@ RSpec.describe "Annonces", type: :request do
         expect(response).to have_http_status(200)
       end
     end
-
   end
 
-    let!(:annonce) { create(:annonce) }
-    let(:annonce_params) { attributes_for(:annonce) }
+  let!(:annonce) { create(:annonce) }
+  let(:annonce_params) { attributes_for(:annonce) }
 
-    describe "GET /annonces" do
-      it "returns a list of annonces" do
-        get annonces_path
-        expect(response).to have_http_status(200)
-      end
+  describe "GET /annonces" do
+    it "returns a list of annonces" do
+      get annonces_path
+      expect(response).to have_http_status(200)
     end
+  end
 
-    describe "GET /annonces/:id" do
-      it "returns a annonce" do
-        get annonce_path(annonce)
-        expect(response).to have_http_status(200)
-      end
+  describe "GET /annonces/:id" do
+    it "returns a annonce" do
+      get annonce_path(annonce)
+      expect(response).to have_http_status(200)
     end
+  end
 end
