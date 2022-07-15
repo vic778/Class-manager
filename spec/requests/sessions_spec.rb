@@ -22,7 +22,7 @@ RSpec.describe "Sessions", type: :request do
     end
 
     context "when request is valid" do
-      before { post "/api/users/login", params: valid_credentials, headers: }
+      before { post "/api/users/login", params: valid_credentials, headers: headers }
 
       it "returns a 200 status code" do
         expect(response).to have_http_status(200)

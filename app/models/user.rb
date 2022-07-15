@@ -29,7 +29,7 @@ class User < ApplicationRecord
   # end
 
   def generate_jwt
-    JWT.encode({ id:, exp: 2.days.from_now.to_i }, 'vicSecret')
+    JWT.encode({ id: id, exp: 2.days.from_now.to_i }, 'vicSecret')
   end
 
   private
