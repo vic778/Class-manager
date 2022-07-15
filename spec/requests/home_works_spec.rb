@@ -4,7 +4,7 @@ RSpec.describe "HomeWorks", type: :request do
   context "when as a teacher" do
     let!(:user) { create(:user, :teacher) }
     let!(:room) { create(:room) }
-    let!(:home_works) { create_list(:home_work, 10, room: room, user: user) }
+    let!(:home_works) { create_list(:home_work, 10, room:, user:) }
 
     describe "GET /home_works" do
       before { get room_home_works_path(room) }

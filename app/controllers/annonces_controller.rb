@@ -4,12 +4,12 @@ class AnnoncesController < PermissionsController
 
   def index
     annonces = Annonce.all
-    render json: { annonces: annonces }
+    render json: { annonces: }
   end
 
   def show
     annonce = Annonce.find(params[:id])
-    render json: { annonce: annonce }
+    render json: { annonce: }
   end
 
   def create
@@ -24,7 +24,7 @@ class AnnoncesController < PermissionsController
   def update
     annonce = Annonce.find(params[:id])
     if annonce.update(annonce_params)
-      render json: { annonce: annonce }
+      render json: { annonce: }
     else
       render json: { error: annonce.errors.full_messages }
     end
