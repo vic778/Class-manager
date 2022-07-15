@@ -26,22 +26,6 @@ class StudentUpsController < PermissionsController
     end
   end
 
-  # def update
-  #     if @student_up.update(student_up_params)
-  #         render json: { success: true, message: "StudentUp updated successfully", student_up: @student_up }
-  #     else
-  #         render json: @student_up.errors, status: :unprocessable_entity
-  #     end
-  # end
-
-  def destroy
-    if @student_up.destroy
-      render json: { success: true, message: "StudentUp deleted successfully" }
-    else
-      render json: @student_up.errors, status: :unprocessable_entity
-    end
-  end
-
   private
 
   def set_student_up

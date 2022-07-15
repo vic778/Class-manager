@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Role, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "it validates factory" do
+    expect(build(:role)).to be_valid
+  end
+
+  it { should have_many(:users) }
+  it { is_expected.to validate_presence_of(:name) }
 end

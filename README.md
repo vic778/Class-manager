@@ -25,7 +25,7 @@
 
 ### Deployment
 
-[Heroku Link]()
+[N/A]()
 
 ## Built With
 

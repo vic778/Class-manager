@@ -70,6 +70,7 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem 'shoulda-matchers'
 end
 
 group :development do
