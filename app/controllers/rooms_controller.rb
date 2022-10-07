@@ -4,6 +4,7 @@ class RoomsController < PermissionsController
   before_action :set_room, only: %i[show update destroy]
 
   def index
+    #get all rooms including users
     @rooms = Room.all
     if @rooms
       render json: @rooms, status: :ok
